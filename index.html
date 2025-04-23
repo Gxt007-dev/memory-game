@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>🧠 Memory Game</h1>
+
+  <div class="stats">
+    <label for="level">Difficulty:</label>
+    <select id="level">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <label for="theme">Theme:</label>
+    <select id="theme">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="neon">Neon</option>
+      <option value="retro">Retro 8-Bit</option>
+      <option value="glass">Glassmorphism</option>
+    </select>
+
+    <span id="timer">Time: 0s</span>
+    <span id="moves">Moves: 0</span>
+    <button id="restart">Restart 🔁</button>
+  </div>
+
+  <div id="gameBoard" class="game-board medium"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
