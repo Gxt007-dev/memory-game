@@ -1,163 +1,39 @@
-/* ========== Base & Light Theme ========== */
-body {
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-  background-color: #f0f0f0;
-  transition: all 0.3s ease;
+/* ===== Ad Styles ===== */
+.ad-top, .ad-bottom {
+  width: 100%;
+  background-color: #ddd;
   color: #333;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-h1 {
-  margin-bottom: 10px;
-}
-
-.stats {
-  margin-top: 10px;
+/* Wrap the game + ad in flex */
+.game-wrapper {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.stats label, .stats select {
-  font-weight: bold;
-}
-
-select, button {
-  padding: 6px 12px;
+/* Sidebar Ad */
+.ad-side {
+  min-width: 160px;
+  max-width: 200px;
+  height: 300px;
+  background-color: #eee;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  text-align: center;
   border-radius: 5px;
-  border: 1px solid #aaa;
-  cursor: pointer;
+  font-size: 0.9em;
 }
 
-button#restart {
-  background-color: #333;
-  color: white;
-  border: none;
-}
-
-button#restart:hover {
-  background-color: #555;
-}
-
-/* ========== Game Board Layouts ========== */
-.game-board {
-  display: grid;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.game-board.easy { grid-template-columns: repeat(3, 100px); }
-.game-board.medium { grid-template-columns: repeat(4, 100px); }
-.game-board.hard { grid-template-columns: repeat(6, 100px); }
-
-.card {
-  width: 100px;
-  height: 100px;
-  background-color: #444;
-  color: white;
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 10px;
-  user-select: none;
-  transition: all 0.2s ease;
-}
-
-.card.flipped {
-  background-color: white;
-  color: #444;
-}
-
-/* ========== Neon Theme ========== */
-body.neon {
-  background-color: #000;
-  color: #0ff;
-}
-
-.neon .card {
-  background-color: #111;
-  border: 2px solid #0ff;
-  text-shadow: 0 0 5px #0ff;
-  box-shadow: 0 0 10px #0ff;
-  color: #0ff;
-}
-
-.neon .card.flipped {
-  background-color: #0ff;
-  color: #111;
-}
-
-/* ========== Retro 8-Bit ========== */
-body.retro {
-  font-family: 'Press Start 2P', cursive;
-  background-color: #222;
-  color: #f5c000;
-}
-
-.retro .card {
-  background-color: #000;
-  color: #f5c000;
-  border: 3px solid #f5c000;
-  image-rendering: pixelated;
-  font-size: 1.5em;
-}
-
-.retro .card.flipped {
-  background-color: #f5c000;
-  color: #000;
-}
-
-/* ========== Glassmorphism Theme ========== */
-body.glass {
-  background: linear-gradient(135deg, #c0c0c0, #f0f0f0);
-  color: #000;
-}
-
-.glass .card {
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  color: #000;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.glass .card.flipped {
-  background: rgba(255, 255, 255, 0.7);
-}
-
-/* ========== Dark Theme ========== */
-body.dark {
-  background-color: #111;
-  color: #eee;
-}
-
-.dark .card {
-  background-color: #333;
-  color: white;
-  border: 1px solid #666;
-}
-
-.dark .card.flipped {
-  background-color: white;
-  color: #333;
-}
-
-/* ========== Mobile Responsive ========== */
-@media (max-width: 500px) {
-  .game-board.easy { grid-template-columns: repeat(3, 80px); }
-  .game-board.medium { grid-template-columns: repeat(4, 80px); }
-  .game-board.hard { grid-template-columns: repeat(4, 80px); }
-
-  .card {
-    width: 80px;
-    height: 80px;
-    font-size: 1.4em;
+/* Responsive: hide sidebar ad on small screens */
+@media (max-width: 768px) {
+  .ad-side {
+    display: none;
   }
 }
